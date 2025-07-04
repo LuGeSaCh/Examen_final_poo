@@ -35,11 +35,11 @@ public class ManejadorCliente implements Runnable {
                     /// ■ Lea el nombre y el número del cliente
                     BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
-                    System.out.println("Cliente" + nombre + "conectado");
                     ///  constructor de writer
                     PrintWriter writer = new PrintWriter(outputStream, true);
 
                     String Nombre = reader.readLine();
+                    System.out.println("Cliente" + Nombre + "conectado");
 
 
                     /// ■ Calcule el cuadrado del número
@@ -50,17 +50,12 @@ public class ManejadorCliente implements Runnable {
                     LocalDateTime fechaHoraActual = LocalDateTime.now();
 
                     /// ■ Envíe la respuesta formateada al cliente
-                    String respuesta = "¡Bienvenido, " + Nombre +
-                                "!\n"
-                                + "El cuadrado de tu número es: " + Num +
-                                "\n"
-                                + "Fecha y hora del servidor: " + fechaHoraActual;
-
+                    String respuesta = "¡Bienvenido, " + Nombre +" El cuadrado de tu número es: " + Num + "Fecha y hora del servidor: " + fechaHoraActual;
                     writer.println(respuesta);
 
                     /// ■ Cierre los recursos adecuadamente
                     socketCliente.close();
-                    System.out.println("Cliente" + nombre + "desconectado");
+                    System.out.println("Cliente" + Nombre + "desconectado");
                 }
 
                 catch(IOException e){
