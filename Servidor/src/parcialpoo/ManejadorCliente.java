@@ -31,13 +31,16 @@ public class ManejadorCliente implements Runnable {
                     InputStream inputStream = socketCliente.getInputStream();
                     OutputStream outputStream = socketCliente.getOutputStream();
 
+
                     /// ■ Lea el nombre y el número del cliente
                     BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
+                    System.out.println("Cliente" + nombre + "conectado");
                     ///  constructor de writer
                     PrintWriter writer = new PrintWriter(outputStream, true);
 
                     String Nombre = reader.readLine();
+
 
                     /// ■ Calcule el cuadrado del número
                     int Num = Integer.parseInt(reader.readLine());
@@ -57,6 +60,7 @@ public class ManejadorCliente implements Runnable {
 
                     /// ■ Cierre los recursos adecuadamente
                     socketCliente.close();
+                    System.out.println("Cliente" + nombre + "desconectado");
                 }
 
                 catch(IOException e){

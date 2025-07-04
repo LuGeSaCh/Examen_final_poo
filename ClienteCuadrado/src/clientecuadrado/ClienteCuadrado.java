@@ -21,13 +21,16 @@ public class ClienteCuadrado {
     public static void main(String[] args) {
         try (
                 //estableciendo conexion 
-                Socket socket = new Socket("localhost", 5000); //metodos de entrada y salida de datos            
+                Socket socket = new Socket("localhost", 5000); //metodos de entrada y salida de datos
+
                 InputStream inputStream = socket.getInputStream(); OutputStream outputStream = socket.getOutputStream(); PrintWriter writer = new PrintWriter(outputStream, true); BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream)); Scanner teclado = new Scanner(System.in);) {
+
             System.out.print("Ingresa tu nombre: ");
             String Nombre = teclado.nextLine();
 
             System.out.print("Ingrese un numero entero: ");
             int Num = teclado.nextInt();
+            teclado.nextLine();
 
             writer.println(Nombre);
             writer.println(Num);
