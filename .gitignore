@@ -24,3 +24,6 @@ hs_err_pid*
 replay_pid*
 /ParcialPOO/nbproject/private/
 /ClienteCuadrado/nbproject/private/
+/Servidor/nbproject/private/
+/Servidor/build/
+/ClienteCuadrado/build/
