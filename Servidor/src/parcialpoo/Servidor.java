@@ -31,5 +31,12 @@ public class Servidor {
             System.out.println("Error en el servidor: " + e.getMessage());
         }
     }
+    /// En el método run:
+    /// ■ Obtenga los flujos de entrada/salida
+    /// ■ Lea el nombre y el número del cliente
+    /// ■ Calcule el cuadrado del número
+    /// ■ Obtenga la fecha y hora actual
+    /// ■ Envíe la respuesta formateada al cliente
+    /// ■ Cierre los recursos adecuadamente
     }
 
